@@ -1,6 +1,4 @@
-Perfecto, aquí tienes un **README corto, limpio y estilo estudiante**, pero mencionando Hugging Face de forma clara:
 
-```md id="r8k3sd"
 # MiniChatGPT HF
 
 MiniChatGPT es un chat simple basado en inteligencia artificial que usa Node.js en el backend y la API de Hugging Face para generar respuestas.
