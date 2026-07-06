@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniGPT HF</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="background"></div>
+<main class="app">
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-circle">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+            <h2>MiniGPT</h2>
+            <span>Powered by Hugging Face</span>
+        </div>
+        <div class="card">
+            <label>
+                <i class="fa-solid fa-graduation-cap"></i>
+                Modo
+            </label>
+            <select id="mode">
+                <option value="js">JavaScript</option>
+                <option value="web">Desarrollo Web</option>
+                <option value="english">Inglés</option>
+                <option value="debug">Depuración</option>
+            </select>
+        </div>
+        <div class="card">
+            <label>
+                <i class="fa-solid fa-microchip"></i>
+                Modelo IA
+            </label>
+            <select id="modelSelect">
+                <option value="meta-llama/Llama-3.1-8B-Instruct">
+                    Llama 3.1 8B
+                </option>
+                <option value="mistralai/Mistral-7B-Instruct-v0.3">
+                    Mistral 7B
+                </option>
+                <option value="Qwen/Qwen3-8B">
+                    Qwen 3
+                </option>
+                <option value="deepseek-ai/DeepSeek-R1">
+                    DeepSeek
+                </option>
+                <option value="google/gemma-3-12b-it">
+                    Gemma 3
+                </option>
+                <option value="microsoft/Phi-4">
+                    Phi-4
+                </option>
+                <option value="TinyLlama/TinyLlama-1.1B-Chat-v1.0">
+                    TinyLlama
+                </option>
+            </select>
+        </div>
+        <button id="clearBtn">
+            <i class="fa-solid fa-trash"></i>Limpiar Chat</button>
+    </aside>
+    <section class="chat">
+        <header class="chat-header">
+            <div>
+                <h3>
+                    <i class="fa-solid fa-comments"></i>
+                    Conversación
+                </h3>
+                <span>Pregunta cualquier cosa</span>
+            </div>
+            <div class="status"><span class="dot"></span>  En línea</div>
+        </header>
+        <div id="messages" class="messages"></div>
+        <form id="chatForm" class="composer">
+            <textarea
+                id="prompt"
+                rows="2"
+                placeholder="Escribe tu pregunta...">
+            </textarea>
+            <button type="submit">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </form>
+    </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
